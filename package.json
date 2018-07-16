@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --colors",
-    "build": "webpack --mode production --colors",
+    "build": "webpack --mode production --colors && cp _redirects build/_redirects",
     "serve": "webpack-dev-server --mode development --content-base build --color --progress",
     "start": "npm run dev && npm run serve"
   },

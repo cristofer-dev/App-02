@@ -1,4 +1,5 @@
 import React from "react";
+import { Route } from "react-router-dom";
 import css from "./home.css";
 
 import Logo from "../Logo";
@@ -9,9 +10,9 @@ const Home = props => {
   return (
     <div className={css.background}>
       <div className={css.container}>
-        {props.miPropiedad == "login" && <Login />}
-        {props.miPropiedad == "signup" && <Signup />}
-        {props.miPropiedad == undefined && <Logo />}
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/" component={Logo} />
       </div>
     </div>
   );

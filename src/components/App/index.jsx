@@ -7,17 +7,8 @@ const App = () => {
   return (
     <div>
       <Route exact path="/" component={Home} />
-      <Route
-        exact
-        path="/login"
-        render={() => <Home miPropiedad="login" />}
-      />
-      <Route
-        exact
-        path="/signup"
-        render={() => <Home miPropiedad="signup" />}
-      />
-      
+      <Route exact path="/login" component={Home} />
+      <Route exact path="/signup" component={Home} />
     </div>
   );
 };
